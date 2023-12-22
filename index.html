@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3" >
+      <div>
+        <form hidden id="formMedecin" class="mt-3 mb-2 col-md-6 offset-3">
+          <div class="card">
+            <div class="card-header h4 text-center">Nouveau Medecin</div>
+            <div class="card-body">
+              <label for="">Nom</label><br>
+              <input type="text" class="form-control" id="nomM"><br>
+              <label for="">Prenom</label><br>
+              <input type="text" class="form-control" id="prenomM"><br>
+              <label for="">Specialite</label><br>
+                <select name="" id="specialiteM" class="form-control">
+                    <option value="Cardiologue">Cardiologue</option>
+                    <option value="Pediatre">Pediatre</option>
+                </select>
+              <button type="button" class="btn btn-sm btn-info" onclick="saveMedecin()" >Enregistrer</button>
+              <button type="button" class="btn btn-sm btn-danger"  onclick="showMedecinForm('c')">Annuler</button>
+            </div>
+          </div>
+        </form>
+     </div>  
+     <div>
+        <form hidden id="formSpecialisation" class="mt-3 mb-2 col-md-6 offset-3">
+            <div class="card">
+                <div class="card-header h4 text-center">Ajouter une specialisation</div>
+                   <div class="card-body">
+                        <label for="">Specialisation</label><br>
+                        <input type="text" class="form-control" id="specialisationMe"><br>
+                        <button type="button" class="btn btn-sm btn-info" onclick="savespecialisation()" >Enregistrer</button>
+                        <button type="button" class="btn btn-sm btn-danger"  onclick="showSpeciaForm('c')">Annuler</button>
+                </div>
+            </div>
+        </form>
+      </div>
+      <div>
+            <form hidden id="formrdv" class="mt-3 mb-2 col-md-6 offset-3">
+              <div class="card">
+                <div class="card-header h4 text-center">Rendez-Vous</div>
+                <div class="card-body">
+                  <label for="">Date</label><br>
+                  <input type="date" class="form-control" id="dateR"><br>
+                  <label for="">Heure</label><br>
+                  <input type="time" class="form-control" id="timeR"><br>
+                  <label for="">Patient</label><br>
+                  <input type="text" class="form-control" id="nomP"><br>
+                  <label for="">Diagnostic</label><br>
+                  <textarea name="diaR" id="diaR" cols="30" rows="2" class="form-control"></textarea><br>
+                  <button type="button" class="btn btn-sm btn-info" onclick="saveRdv()" >Enregistrer</button>
+                  <button type="button" class="btn btn-sm btn-danger"  onclick="showRdvForm('c')">Annuler</button>
+                </div>
+              </div>
+            </form>
+         </div>  
+      <div id="contenu">
+
+      </div>
+      <div id="contenuRdv">
+
+      </div>
+    </div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
